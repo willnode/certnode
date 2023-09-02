@@ -1,6 +1,6 @@
 {
-  "name": "certnode",
-  "version": "0.0.1",
+  "name": "@willnode/certnode",
+  "version": "0.1.0",
   "description": "Generate Let's Encrypt certificates for your domains",
   "main": "lib/index.js",
   "type": "module",
@@ -22,7 +22,7 @@
     "domain name",
     "letsencrypt"
   ],
-  "author": "Zachary Balder",
+  "author": "Wildan Mubarok",
   "license": "ISC",
   "dependencies": {
     "jose": "^3.20.4",
