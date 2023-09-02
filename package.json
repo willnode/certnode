@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Generate Let's Encrypt certificates for your domains",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
     "doc": "jsdoc README.md lib/**",
     "lint": "eslint example.js lib/ test/",
@@ -24,8 +25,8 @@
   "author": "Zachary Balder",
   "license": "ISC",
   "dependencies": {
-    "jose-node-cjs-runtime": "^3.12.2",
-    "pem": "^1.14.4"
+    "jose": "^3.20.4",
+    "pem": "^1.14.7"
   },
   "devDependencies": {
     "@sinonjs/fake-timers": "^7.1.2",
