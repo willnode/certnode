@@ -1,12 +1,12 @@
-const assert = require('assert')
-const fs = require('fs')
-const path = require('path')
-const { generateKeyPair } = require('jose-node-cjs-runtime/util/generate_key_pair')
-const common = require('../../lib/common')
+import assert from 'assert';
+import fs from 'fs/promises';
+import path from 'path';
+import { generateKeyPair } from 'jose/util/generate_key_pair';
+import common from '../../lib/common';
 
-const fixturesDir = path.resolve(__dirname, '..', 'fixtures')
-const keysDir = path.join(fixturesDir, 'keys')
-const privateKeyFile = path.join(keysDir, 'privateKey.pem')
+const fixturesDir = path.resolve(__dirname, '..', 'fixtures');
+const keysDir = path.join(fixturesDir, 'keys');
+const privateKeyFile = path.join(keysDir, 'privateKey.pem');
 
 describe('lib/common', () => {
   describe('#exportPrivateKey()', () => {

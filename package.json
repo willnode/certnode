@@ -4,6 +4,7 @@
   "description": "Generate Let's Encrypt certificates for your domains",
   "main": "lib/index.js",
   "type": "module",
+  "private": "false",
   "scripts": {
     "doc": "jsdoc README.md lib/**",
     "lint": "eslint example.js lib/ test/",
@@ -39,5 +40,17 @@
     "jsdoc": "^3.6.7",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willnode/certnode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willnode/certnode/issues"
+  },
+  "homepage": "https://github.com/willnode/certnode#readme"
 }

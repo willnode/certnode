@@ -12,7 +12,7 @@ This was primarily a learning exercise but also an effort to create a package th
 
 ## Install
 
-`npm i certnode`
+`npm i @willnode/certnode`
 
 ## Usage
 
@@ -23,7 +23,7 @@ The example code can be found [here](./example.js).
 ### Generate account keys
 
 ```js
-const certnode = require('certnode')
+const certnode = require('@willnode/certnode')
 const fs = require('fs')
 const https = require('https')
 

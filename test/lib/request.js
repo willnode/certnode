@@ -1,10 +1,10 @@
-const assert = require('assert')
-const fakeTimers = require('@sinonjs/fake-timers')
-const request = require('../../lib/request')
+import assert from 'assert';
+import { install as installFakeTimers } from '@sinonjs/fake-timers';
+import request from '../../lib/request';
 
 describe('lib/request', () => {
   beforeEach(() => {
-    this.clock = fakeTimers.install()
+    this.clock = installFakeTimers();
   })
 
   afterEach(() => {

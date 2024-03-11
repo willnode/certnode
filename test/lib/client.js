@@ -1,15 +1,15 @@
-const assert = require('assert')
-const crypto = require('crypto')
-const fs = require('fs')
-const path = require('path')
-const fakeTimers = require('@sinonjs/fake-timers')
-const Client = require('../../lib/client')
-const common = require('../../lib/common')
+import assert from 'assert';
+import crypto from 'crypto';
+import fs from 'fs/promises';
+import path from 'path';
+import { install as installFakeTimers } from '@sinonjs/fake-timers';
+import Client from '../../lib/client';
+import common from '../../lib/common';
 
-const fixturesDir = path.resolve(__dirname, '..', 'fixtures')
-const keysDir = path.join(fixturesDir, 'keys')
-const privateKeyFile = path.join(keysDir, 'privateKey.pem')
-const publicKeyFile = path.join(keysDir, 'publicKey.pem')
+const fixturesDir = path.resolve(__dirname, '..', 'fixtures');
+const keysDir = path.join(fixturesDir, 'keys');
+const privateKeyFile = path.join(keysDir, 'privateKey.pem');
+const publicKeyFile = path.join(keysDir, 'publicKey.pem');
 
 describe('lib/client', function () {
   this.timeout(10e3)
@@ -266,7 +266,7 @@ describe('lib/client', function () {
     })
 
     it('times out after 10s', async () => {
-      const clock = fakeTimers.install()
+      const clock = installFakeTimers()
       const { authzUrls } = await this.client.newOrder('potato.com')
       const { challenge } = await this.client.authz(authzUrls[0])
 
